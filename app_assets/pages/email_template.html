@@ -1,0 +1,29 @@
+
+ <body style="background-color: #e1e4e8;">
+    <!-- Email Template for forgot password -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Poppins:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
+    <div   class = "email-template" style="font-family: 'Poppins',sans-serif;margin:0 auto; max-width:300px; background-color: #ffffff; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 50px; border-radius: 8px;"> 
+         <div   class = "email-template-header"> 
+             <div   class = "email-template-header-logo"> 
+                 <img   src = "../images/logo/logo.png"   alt = "Logo"> 
+             </div> 
+             <div  class = "email-template-header-title"> 
+                 <h3 align="left">confirmation code</h3> 
+             </div> 
+         </div> 
+         <div   class = "email-template-body"> 
+             <p> Hi {{user_name}}, </p> 
+             <p> This code can only be used once. If you didn't request a code, please ignore this email. Never share this code with anyone else </p> 
+             <p> PLease Enter the below code to reset your password </p>
+                <pre> <h2><b> {{code}} </b></h2> </pre>
+    
+                <p> Thanks, </p>
+                <p> ABC Team </p>
+    
+         </div> 
+         <div   class = "email-template-footer"> 
+             <p> © 2019 ABC. All rights reserved. </p> 
+         </div> 
+     </div>
+    
+ </body>

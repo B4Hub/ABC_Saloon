@@ -1,0 +1,44 @@
+:root{
+    font-size: small;
+}
+body{
+    background-color:#fff;
+    font-family: 'Poppins',sans-serif;
+}
+#auth{
+    height:100vh;
+    overflow-x:hidden;
+}
+#auth #auth-right{
+    background:url(../../images/bg/4853433.jpg),linear-gradient(90deg,#2d499d,#3f5491);
+    height:100%;
+    width:0%;
+}
+#auth #auth-left{
+    padding:5rem 8rem;
+    width:100%;
+}
+#auth #auth-left .auth-title{
+    margin-bottom:1rem
+}
+#auth #auth-left .auth-subtitle{
+    color:#a8aebb;
+    line-height:2.5rem
+}
+#auth #auth-left .auth-logo{
+    margin-bottom:7rem
+}
+#auth #auth-left .auth-logo img{
+    height:2rem
+}
+@media screen and (max-width:767px){
+    #auth #auth-left{
+        padding:5rem
+    }
+}
+@media screen and (max-width:576px){
+    #auth #auth-left{
+        padding:5rem 3rem
+    }
+}
+ 

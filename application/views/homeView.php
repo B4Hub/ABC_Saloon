@@ -71,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="<?php echo base_url()?>Main/mobilenoView" class="get-started-btn">Book Appointment</a>
+      <a href="<?php echo base_url()?>Customer" class="get-started-btn">Book Appointment</a>
 
     </div>
   </header><!-- End Header -->
@@ -81,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
       <h1><br>Hair Cuts</h1>
       <h2>professional hair cuts @Abc Saloon</h2>
-      <a href="<?php echo base_url()?>Main/mobilenoView" class="btn-get-started">Book Appointment</a>
+      <a href="<?php echo base_url()?>Customer/" class="btn-get-started">Book Appointment</a>
     </div>
   </section>
   <!-- End Hero -->
@@ -310,7 +310,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <img src="<?php echo base_url()?>web_assets/img/hc-1.jpg" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4><a href="<?php echo base_url()?>Main/mobilenoView" style="color:white">Book Service Now</a></h4>
+                  <h4><a href="<?php echo base_url()?>Customer" style="color:white">Book Service Now</a></h4>
                   <p class="price">$250</P>
                 </div>
 
@@ -325,7 +325,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <img src="<?php echo base_url()?>web_assets/img/hair-spa.jpg" style="width:100%;" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4><a href="<?php echo base_url()?>Main/mobilenoView" style="color:white">Book Service Now</a></h4>
+                  <h4><a href="<?php echo base_url()?>Customer" style="color:white">Book Service Now</a></h4>
                  <p class="price">$250</P>
                 </div>
 
@@ -341,7 +341,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <img src="<?php echo base_url()?>web_assets/img/hairstyle.jpeg" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4><a href="<?php echo base_url()?>Main/mobilenoView" style="color:white">Book Service Now</a></h4>
+                  <h4><a href="<?php echo base_url()?>Customer" style="color:white">Book Service Now</a></h4>
                   <p class="price">$250</P>
                 </div>
 
@@ -366,7 +366,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <img src="<?php echo base_url()?>web_assets/img/facial.jpeg" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4><a href="<?php echo base_url()?>Main/mobilenoView" style="color:white">Book Service Now</a></h4>
+                  <h4><a href="<?php echo base_url()?>Customer" style="color:white">Book Service Now</a></h4>
                   <p class="price">$250 </P>
                 </div>
 
@@ -381,7 +381,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <img src="<?php echo base_url()?>web_assets/img/pedicure.jpeg" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4><a href="<?php echo base_url()?>Main/mobilenoView" style="color:white">Book Service Now</a></h4>
+                  <h4><a href="<?php echo base_url()?>Customer" style="color:white">Book Service Now</a></h4>
                   <p class="price">$250</P>
                 </div>
 
@@ -397,7 +397,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <img src="<?php echo base_url()?>web_assets/img/manicure.jpeg" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4><a href="<?php echo base_url()?>Main/mobilenoView" style="color:white">Book Service Now</a></h4>
+                  <h4><a href="<?php echo base_url()?>Customer" style="color:white">Book Service Now</a></h4>
                   <p class="price">$250</P>
                 </div>
 
@@ -423,7 +423,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <img src="<?php echo base_url()?>web_assets/img/haircolor.jpeg" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4><a href="<?php echo base_url()?>Main/mobilenoView" style="color:white">Book Service Now</a></h4>
+                  <h4><a href="<?php echo base_url()?>Customer" style="color:white">Book Service Now</a></h4>
                   <p class="price">$250</P>
                 </div>
 
@@ -438,7 +438,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <img src="<?php echo base_url()?>web_assets/img/B&G.jpeg" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4><a href="<?php echo base_url()?>Main/mobilenoView" style="color:white">Book Service Now</a></h4>
+                  <h4><a href="<?php echo base_url()?>Customer" style="color:white">Book Service Now</a></h4>
                   <p class="price">$250</P>
                 </div>
 
@@ -454,7 +454,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <img src="<?php echo base_url()?>web_assets/img/shampoo.jpeg" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4><a href="<?php echo base_url()?>Main/mobilenoView" style="color:white">Book Service Now</a></h4>
+                  <h4><a href="<?php echo base_url()?>Customer" style="color:white">Book Service Now</a></h4>
                  <div> <p class="price"> <strike style="color:grey">$250</strike> </P>
                   <p style="color:green" class="price">$150</P>
                   </div>

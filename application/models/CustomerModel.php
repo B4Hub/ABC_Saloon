@@ -117,6 +117,29 @@ class CustomerModel extends CI_Model{
         return $this->db->get('payment')->result_array();
     }
 
+
+    public function UpdatePass($emp_id,$new_pass){
+        $this->db->where("cust_id",$emp_id);
+        $password = password_hash($new_pass, PASSWORD_DEFAULT);
+        if($this->db->update("customer",array("cust_pass"=>$password))){
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
+
+    public function resetPass($emp_email,$pass){
+        $this->db->where("cust_email",$emp_email);
+        $password = password_hash($pass, PASSWORD_DEFAULT);
+        if($this->db->update("customer",array("cust_pass"=>$password))){
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
+
 }
 
 ?>

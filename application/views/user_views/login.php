@@ -26,7 +26,6 @@
     }
 </style>
 
-
 </head>
 
 <body>
@@ -59,12 +58,12 @@ Toastify({
             <div class="auth-logo">
                 <a href="index.html"><img src="app_assets/images/logo/logo.png" alt="Logo"></a>
             </div>
-            <h1 class="auth-title">Log in.</h1>
-            <p class="auth-subtitle mb-5">Log in with your data.</p>
+            <h1 class="auth-title">Customer Login</h1>
+            <p class="auth-subtitle mb-5">Login with your data.</p>
 
-            <form action="<?php echo base_url() ?>Admin/login" method="post">
+            <form action="<?php echo base_url() ?>Customer/login" method="post">
                 <div class="form-group position-relative has-icon-right mb-4">
-                    <input type="text" class="form-control form-control-xl" name="username" placeholder="Username">
+                    <input type="text" class="form-control form-control-xl" name="username" placeholder="Email">
                     
                 </div>
                 <div class="form-group position-relative has-icon-right">
@@ -85,7 +84,7 @@ Toastify({
             </form>
             <div class="text-center mt-5 text-lg fs-5">
                 
-                <p><a class="font-bold" href="<?php base_url()?>Admin/forgotpass">Forgot password?</a>.</p>
+                <p><a class="font-bold" href="<?php base_url()?>Customer/forgotpass">Forgot password?</a>.</p>
             </div>
         </div>
     </div>

@@ -688,11 +688,20 @@ class Admin extends CI_Controller {
 	}
 
 	function sendCode($email,$code){
-		$this->load->library('email');
-		$this->email->from('teaminnovative24@gmail.com', 'Team Innovative');
-		$this->email->to($email);
-		$this->email->subject('Confirmation Code for Password Reset');
-		$this->email->message(' 
+        $this->load->library('phpmailer_lib') or die("error");
+        $mail = $this->phpmailer_lib->load();
+        $mail->isSMTP();
+        $mail->Host     = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'escrteam@gmail.com';
+        $mail->Password = 'xodwtivaobdovhcb';
+        $mail->SMTPSecure = 'tls';
+        $mail->Port     = 587;
+        $mail->setFrom('escrteam@gmail.com', 'Team ESCR');
+        $mail->addAddress($email);
+		$mail->Subject = 'Confirmation Code for Password Reset';
+        $mail->isHTML(true);
+		$mail->Body = ' 
 		<body style="background-color: #e1e4e8;">
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Poppins:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
 		<div   class = "email-template" style="font-family: \'Poppins\',sans-serif;margin:0 auto; max-width:300px; background-color: #ffffff; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 50px; border-radius: 8px;"> 
@@ -715,12 +724,12 @@ class Admin extends CI_Controller {
 		
 			 </div> 
 			 <div   class = "email-template-footer"> 
-				 <p> &copy 2022 ABC. All rights reserved. </p> 
+				 <p> &copy 2023 ABC. All rights reserved. </p> 
 			 </div> 
 		 </div>
 		
-	   </body>');
-		if($this->email->send()) return true;
+	   </body>';
+		if($mail->send()) return true;
 		else return false;
 	}
 

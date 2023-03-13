@@ -33,6 +33,27 @@ class AuthModel extends CI_Model{
             return false;
         }
     }
+
+
+    public function CustomerAuthenticateLogin(){
+        
+        $this->db->select("cust_id,cust_name,cust_email,cust_pass,cust_gender,cust_phno,cust_branch");
+        $this->db->where("cust_email",$this->input->post('username'));
+        return $this->db->get('customer')->row();
+        
+    }
+
+
+    public function userCheckEmail($email){
+        $this->db->select("*");
+        $this->db->where("cust_email",$email);
+        if($this->db->get('customer')->num_rows() > 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }
 
 ?>

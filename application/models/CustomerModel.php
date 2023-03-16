@@ -118,8 +118,8 @@ class CustomerModel extends CI_Model{
     }
 
 
-    public function UpdatePass($emp_id,$new_pass){
-        $this->db->where("cust_id",$emp_id);
+    public function UpdatePass($cust_id,$new_pass){
+        $this->db->where("cust_id",$cust_id);
         $password = password_hash($new_pass, PASSWORD_DEFAULT);
         if($this->db->update("customer",array("cust_pass"=>$password))){
             return true;
@@ -129,8 +129,8 @@ class CustomerModel extends CI_Model{
         
     }
 
-    public function resetPass($emp_email,$pass){
-        $this->db->where("cust_email",$emp_email);
+    public function resetPass($cust_email,$pass){
+        $this->db->where("cust_email",$cust_email);
         $password = password_hash($pass, PASSWORD_DEFAULT);
         if($this->db->update("customer",array("cust_pass"=>$password))){
             return true;

@@ -71,51 +71,43 @@ box-shadow: 0px 0px 32px 10px rgba(0,0,0,0.06);
             <li class="sidebar-title">Menu</li>
             
             <li id="dashboard-li" class="sidebar-item">
-                <a href="<?php echo base_url() ?>Admin/Dashboard" class='sidebar-link'>
+                <a href="<?php echo base_url() ?>Customer/Dashboard" class='sidebar-link'>
                     <i class="bi bi-grid-fill"></i>
-                    <span>Dashboard</span>
+                    <span>Customer Details</span>
                 </a>
             </li>
             
             
-           
-            
-            
-            
-
-
-            
-            
             <li id="appointmentslist-li"
                 class="sidebar-item ">
-                <a href="<?php echo base_url() ?>Admin/AddAppointment" class='sidebar-link'>
+                <a href="<?php echo base_url() ?>Customer/BookAppointment" class='sidebar-link'>
                 <i class="bi bi-people-fill"></i>
                     <span>Book Appointment</span>
                 </a>
             </li>
 
-            <li id="payments-li"
+           <!--  <li id="payments-li"
                 class="sidebar-item ">
-                <a href="<?php echo base_url() ?>Admin/Payments" class='sidebar-link'> 
+                <a href="<?php echo base_url() ?>Customer/Payments" class='sidebar-link'> 
                     <i class="bi bi-megaphone-fill"></i>
                     <span>Payments</span>
                 </a>
             </li>
 
-            
+             -->
            
             
            
-            <li class="sidebar-title">Customer Responses</li>
-            
+     <!--       <li class="sidebar-title">Customer Responses</li>
+             
             <li id="feedback-li"
                 class="sidebar-item">
-                <a href="<?php echo base_url() ?>Admin/Feedback" class='sidebar-link'>
+                <a href="<?php echo base_url() ?>Customer/Feedback" class='sidebar-link'>
                     <i class="bi bi-pentagon-fill"></i>
                     <span>Feedback</span>
                 </a>
                 
-            </li>
+            </li> -->
             
             
             
@@ -124,18 +116,18 @@ box-shadow: 0px 0px 32px 10px rgba(0,0,0,0.06);
             
             
             <li class="sidebar-title">Account Settings</li>
-            
+<!--             
             <li id="profile-li"
                 class="sidebar-item  ">
-                <a href="<?php echo base_url() ?>Admin/Profile" class='sidebar-link'>
+                <a href="<?php echo base_url() ?>Customer/Profile" class='sidebar-link'>
                     <i class="bi bi-person"></i>
                     <span>Profile</span>
                 </a>
-            </li>
+            </li> -->
             
             <li id="passchange-li"
                 class="sidebar-item  ">
-                <a href="<?php echo base_url() ?>Admin/ChangePass" class='sidebar-link'>
+                <a href="<?php echo base_url() ?>Customer/ChangePass" class='sidebar-link'>
                     <i class="bi bi-shield-lock"></i>
                     <span>Change Password</span>
                 </a>

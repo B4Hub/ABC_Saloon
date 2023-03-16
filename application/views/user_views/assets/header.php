@@ -57,15 +57,15 @@
                             <li>
                                 <h6 class="dropdown-header">Hello, <?php echo explode(' ',$user_data->cust_name)[0] ?>!</h6>
                             </li>
-                            <li><a class="dropdown-item" href="<?php echo base_url() ?>Admin/Profile"><i class="icon-mid bi bi-person me-2"></i> My
+                           <!--  <li><a class="dropdown-item" href="<?php echo base_url() ?>Customer/Profile"><i class="icon-mid bi bi-person me-2"></i> My
                                     Profile</a></li>
-                            <li><a class="dropdown-item" href="<?php echo base_url() ?>Admin/Settings"><i class="icon-mid bi bi-gear me-2"></i>
-                                    Settings</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url() ?>Customer/Settings"><i class="icon-mid bi bi-gear me-2"></i>
+                                    Settings</a></li> -->
                             
-                            <li>
+                            <li> 
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item text-danger fw-bold" href="<?php echo base_url() ?>Admin/Logout"><i class="icon-mid bi bi-box-arrow-left me-2"></i> Logout</a></li>
+                            <li><a class="dropdown-item text-danger fw-bold" href="<?php echo base_url() ?>Customer/Logout"><i class="icon-mid bi bi-box-arrow-left me-2"></i> Logout</a></li>
                         </ul>
                     </div>
                 </div>

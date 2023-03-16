@@ -211,6 +211,8 @@ class Admin extends CI_Controller {
 			
 		}
 	}
+
+	
 	public function DeleteCustomer()
 	{
 		if(get_cookie('auth_token')==NULL){
@@ -805,6 +807,130 @@ class Admin extends CI_Controller {
 	}
 
 
+	public function AddBranch()
+	{
+		if(get_cookie('auth_token')==NULL){
+			redirect(base_url().'Admin');
+		}else{
+
+			try{
+				
+				$this->load->model('AdminModel');
+				// $data['employees']=$this->AdminModel->EmployeeList();
+				$data['status']=$this->session->flashdata('status');
+				$data['user_data']=JWT::decode(get_cookie('auth_token'),'485489464',true);
+				$data['li_id'] = "branches-li";   
+				$data['li_eq']="0";
+				$this->load->view('assets/sidebar',$data);
+				$this->load->view('assets/header',$data);
+				$this->load->view('admin_views/add_branches',$data);
+				$this->load->view('assets/footer',$data);
+			}catch(Exception $e){
+				delete_cookie('auth_token');
+				redirect(base_url().'Admin');
+			}
+			
+		}
+	}
+
+
+	public function NewBranch(){
+		if(get_cookie('auth_token')==NULL){
+			redirect(base_url().'Admin');
+		}else{
+
+			try{
+				
+				$this->load->model('AdminModel');
+				// $data['employees']=$this->AdminModel->EmployeeList();
+				$data['status']=$this->session->flashdata('status');
+				$data['user_data']=JWT::decode(get_cookie('auth_token'),'485489464',true);
+				$branch_name = $this->input->post('')
+			}catch(Exception $e){
+				delete_cookie('auth_token');
+				redirect(base_url().'Admin');
+			}
+			
+		}
+	}
+
+	public function AddEmployee()
+	{
+		if(get_cookie('auth_token')==NULL){
+			redirect(base_url().'Admin');
+		}else{
+
+			try{
+				
+				$this->load->model('CustomerModel');
+				$data['employees']=$this->EmployeeModel->EmployeeList();
+				$data['status']=$this->session->flashdata('status');
+				$data['user_data']=JWT::decode(get_cookie('auth_token'),'485489464',true);
+				$data['li_id'] = "employees-li";   
+				$data['li_eq']="0";
+				$this->load->view('assets/sidebar',$data);
+				$this->load->view('assets/header',$data);
+				$this->load->view('admin_views/add_employee',$data);
+				$this->load->view('assets/footer',$data);
+			}catch(Exception $e){
+				delete_cookie('auth_token');
+				redirect(base_url().'Admin');
+			}
+			
+		}
+	}
+	public function EmployeesList()
+	{
+		if(get_cookie('auth_token')==NULL){
+			redirect(base_url().'Admin');
+		}else{
+
+			try{
+				
+				
+				$this->load->model('CustomerModel');
+				$data['customers']=$this->CustomerModel->CustomersList();
+				$data['user_data']=JWT::decode(get_cookie('auth_token'),'485489464',true);
+				$data['status']=$this->session->flashdata('status');
+				$data['li_id'] = "employees-li";   
+				$data['li_eq']="1";
+				$this->load->view('assets/sidebar',$data);
+				$this->load->view('assets/header',$data);
+				$this->load->view('customer',$data);
+				$this->load->view('assets/footer',$data);
+			}catch(Exception $e){
+				delete_cookie('auth_token');
+				redirect(base_url().'Admin');
+			}
+			
+		}
+	}
+	public function BranchesList()
+	{
+		if(get_cookie('auth_token')==NULL){
+			redirect(base_url().'Admin');
+		}else{
+
+			try{
+				
+				
+				$this->load->model('CustomerModel');
+				$data['customers']=$this->CustomerModel->CustomersList();
+				$data['user_data']=JWT::decode(get_cookie('auth_token'),'485489464',true);
+				$data['status']=$this->session->flashdata('status');
+				$data['li_id'] = "branches-li";   
+				$data['li_eq']="1";
+				$this->load->view('assets/sidebar',$data);
+				$this->load->view('assets/header',$data);
+				$this->load->view('customer',$data);
+				$this->load->view('assets/footer',$data);
+			}catch(Exception $e){
+				delete_cookie('auth_token');
+				redirect(base_url().'Admin');
+			}
+			
+		}
+	}
 
 	//employee table
 	

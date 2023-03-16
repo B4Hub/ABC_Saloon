@@ -43,6 +43,12 @@ class AuthModel extends CI_Model{
         
     }
 
+    public function getCustomer($cust_id){
+        $this->db->select("cust_id,cust_name,cust_email,cust_pass,cust_gender,cust_phno,cust_branch");
+        $this->db->where("cust_id",$cust_id);
+        return $this->db->get('customer')->row();
+    }
+
 
     public function userCheckEmail($email){
         $this->db->select("*");

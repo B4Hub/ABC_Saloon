@@ -161,7 +161,7 @@ Toastify({
                                                 echo $service['service_name']."<br>";
                                             }
                                         ?></td>
-                                        <td><?= $appointment['total_price'] ?></td>
+                                        <td>₹ <?= $appointment['total_price'] ?></td>
                                     </tr>
                                 
                                     </tr>

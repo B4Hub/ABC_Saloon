@@ -157,10 +157,10 @@ box-shadow: 0px 0px 32px 10px rgba(0,0,0,0.06);
                 <ul class="submenu ">
                     
                     <li class="submenu-item ">
-                        <a href="component-tooltip.html">Add Branch</a>
+                        <a href="<?php echo base_url() ?>Admin/AddBranch">Add Branch</a>
                     </li>
                     <li class="submenu-item ">
-                        <a href="component-tooltip.html">Branches List</a>
+                        <a href="<?php echo base_url() ?>Admin/BranchesList">Branches List</a>
                     </li>
                 </ul>
             </li>
@@ -175,10 +175,10 @@ box-shadow: 0px 0px 32px 10px rgba(0,0,0,0.06);
                 <ul class="submenu">
                     
                     <li class="submenu-item">
-                        <a href="component-tooltip.html">Add Employees</a>
+                        <a href="<?php echo base_url() ?>Admin/AddEmployee">Add Employees</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="<?php echo base_url() ?>Admin/EmployeeList">Employees List</a>
+                        <a href="<?php echo base_url() ?>Admin/EmployeesList">Employees List</a>
                     </li>
                 </ul>
             </li>

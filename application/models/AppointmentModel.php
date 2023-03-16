@@ -84,12 +84,17 @@ class AppointmentModel extends CI_Model{
      }
 
     private function getGUIDnoHash(){
-        mt_srand((int)microtime()*10000);
-        $charid = md5(uniqid(rand(), true));
-        $c = unpack("C*",$charid);
-        $c = implode("",$c);
-
-        return substr($c,0,10);
+        // Generate 128-bit (16-byte) random number
+        $randomNumber = openssl_random_pseudo_bytes(16);
+        // Convert it to hexadecimal string
+        $randomNumber = bin2hex($randomNumber);
+        // Insert dashes
+        $guid = substr($randomNumber, 0, 8) . '-' .
+                substr($randomNumber, 8, 4) . '-' .
+                substr($randomNumber, 12, 4) . '-' .
+                substr($randomNumber, 16, 4) . '-' .
+                substr($randomNumber, 20, 12);
+        return $guid;
     }
 
     public function NewAppointment(){
@@ -111,12 +116,13 @@ class AppointmentModel extends CI_Model{
         
         try{
             if($this->db->insert('payment',[
-                'trans_id' => $data['payment_id'],
+                'trans_id' => '',
                 'trans_mode'=>$data['payment_mode'],
                 'trans_amt'=>$data['total_price'],
                 'trans_status'=>"success"
             ])){
                 if($this->db->insert('appointment',$data)){
+
                     $appoint_id = $this->db->insert_id();
                     foreach($this->input->post('services') as $service){
                         $this->db->insert('appointment_service',[
@@ -134,6 +140,55 @@ class AppointmentModel extends CI_Model{
         }
 
     }
+
+
+
+    public function CustomerNewAppointment(){
+        $data['branch_id'] = $this->input->post('branch');
+        $data['slot_id'] = $this->input->post('slot');
+        $data['appoint_date'] = $this->input->post('date');
+        $data['status'] = 'pending';
+        $data['cust_id'] = $this->input->post('customer_id');
+        $data['payment_mode'] = 'stripe';
+        $data['remarks'] = 'none';
+        $amount = 0;
+        foreach($this->input->post('services') as $service){
+            $amount += $this->db->query("SELECT `service`.`service_cost` FROM `service` WHERE `service`.`service_id`='$service' AND `service`.`branch_id`='".$data['branch_id']."'")->result_array()[0]['service_cost'];
+        }
+        $amount+= $amount*0.2;
+        $data['total_price'] = $amount;
+        $data['payment_id']=$this->getGUIDnoHash();
+        
+        try{
+            if($this->db->insert('payment',[
+                'payment_id'=>$data['payment_id'],
+                'trans_id' => '',
+                'trans_mode'=>$data['payment_mode'],
+                'trans_amt'=>$data['total_price'],
+                'trans_status'=>"pending"
+            ])){
+                if($this->db->insert('appointment',$data)){
+                    
+                    $appoint_id = $this->db->insert_id();
+                    foreach($this->input->post('services') as $service){
+                        $this->db->insert('appointment_service',[
+                            'appointment_id'=>$appoint_id,
+                            'service_id'=>$service
+                        ]);
+                    }
+                    
+                }
+            }
+
+            
+            return $data['payment_id'];
+        }catch(Exception $e){
+            return false;
+        }
+
+    }
+
+
 }
 
 ?>
